@@ -51,6 +51,16 @@
   \begin{center}\textbf{git submodule }add $<$repository-url$>$\end{center}
 \end{frame}
 
+\begin{frame}
+	\frametitle{digging deeper..}
+	\begin{itemize}
+		\item When initializing a submodule, a \textbf{.gitmodules} file will be created. It contains a \emph{SHA1} commit id.
+		\item \textbf{git-grep} does not look for submodules.
+		\item update via \textbf{git submodule update}
+		\item committing in a submodule does not update the \textbf{.gitmodules} file!
+	\end{itemize}
+\end{frame}
+
 \section{Pros and Cons}
 \section{Live Demo}
 \section{Updating Submodules}
