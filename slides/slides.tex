@@ -63,6 +63,10 @@
 \end{frame}
 
 \section{Updating Submodules}
+
+\begin{frame}
+\begin{center}cd $<$your-submodule-path$>$\\\textbf{git submodule update}\end{center}
+\end{frame}
 \section{Working on Submodules}
 
 \begin{frame}
@@ -70,8 +74,8 @@
 	\begin{itemize}
 		\item When initializing a submodule, a \textbf{.gitmodules} file will be created. It contains a \emph{SHA1} commit id.
 		\item \textbf{git-grep} does not look for submodules.
-		\item update via \textbf{git submodule update}
 		\item committing in a submodule does not update the \textbf{.gitmodules} file!
+		\item push the commited \textbf{.gitmodules} file to update the submodule reference on origin.
 	\end{itemize}
 \end{frame}
 
