@@ -30,6 +30,28 @@
 \section{Pros and Cons}
 \section{Live Demo}
 \section{Updating Submodules}
+
+\begin{frame}[fragile]
+  \frametitle{Getting upstream changes}
+   Submodules require you to  \alert{explicitly} trigger an update.
+   This protects you from blowing your project up with unexpected changes to one of the submodules. The easiest way to update a submodule after entering the submodule directory is:
+
+  \begin{center} \texttt{git submodule update --remote} \end{center}
+  
+  Git now automatically \emph{fetches} the changes from upstream and \emph{merges} them.
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Using different remotes than master}
+  Git defaults to using the master branch to pull in changes when you update submodules.
+  This can be changed by setting a different remote for the submodule. There a two places to change this:
+\begin{center} 
+  \texttt{.gitmodules} changed for everyone \\
+  \texttt{.git/config} changed localy for just you
+\end{center}
+
+\end{frame}
 \section{Working on Submodules}
 
 \end{document}
