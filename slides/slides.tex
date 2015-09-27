@@ -3,6 +3,7 @@
 \usetheme{m}
 
 \usepackage{booktabs}
+\usepackage{graphicx}
 \usepackage[scale=2]{ccicons}
 
 \usepackage{pgfplots}
@@ -27,6 +28,28 @@
 
 
 \section{Introduction}
+
+\begin{frame}
+  \frametitle{Monoliths (really big projects!)}
+  \begin{center}\includegraphics[width=280px]{images/monoliths.jpg}\end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Monoliths (continued)}
+  In terms of git there are a lot of drawbacks:
+  \begin{itemize}
+  	\item takes a long time to clone
+  	\item many contributors
+  	\item hard to keep track of all changes
+  	\item wastes local disk space
+  \end{itemize}  
+\end{frame}
+
+\begin{frame}
+  \frametitle{the answer: git-submodules?}
+  \begin{center}\includegraphics[width=280px]{images/divide.jpg}\end{center}
+\end{frame}
+
 \section{Pros and Cons}
 \section{Live Demo}
 \section{Updating Submodules}
