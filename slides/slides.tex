@@ -4,7 +4,7 @@
 
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
-
+\usepackage{graphicx}
 \usepackage{pgfplots}
 \usepgfplotslibrary{dateplot}
 
@@ -48,10 +48,25 @@
   This can be changed by setting a different remote for the submodule. There a two places to change this:
 \begin{center} 
   \texttt{.gitmodules} changed for everyone \\
-  \texttt{.git/config} changed localy for just you
+  \texttt{.git/config} changed locally for just you
 \end{center}
 
 \end{frame}
 \section{Working on Submodules}
+
+\begin{frame}
+\frametitle{Submodules start headless}
+ \begin{center}
+ \includegraphics[width=280px]{images/nixon}
+ \end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Setting up submodules for changes}
+   Submodules are normally in an detached head state, so that any changes are not tracked. To start tracking the changes we need to create a branch that contains the changes we do to our submodule.
+   
+
+\end{frame}
 
 \end{document}
