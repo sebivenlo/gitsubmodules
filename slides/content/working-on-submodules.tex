@@ -1,0 +1,56 @@
+\section{Working on Submodules}
+
+
+\begin{frame}
+\frametitle{Updating submodules}
+\begin{center}cd $<$your-submodule-path$>$\\\textbf{git submodule update}\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Getting upstream changes}
+   Submodules require you to  \alert{explicitly} trigger an update.
+   This protects you from blowing your project up with unexpected changes to one of the submodules.    
+  \begin{center}cd $<$your-submodule-path$>$\\ \texttt{git submodule update --remote} \end{center}
+  
+  Git now automatically \emph{fetches} the changes from upstream and \emph{merges} them.
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Using different remotes than master}
+  Git defaults to using the master branch to pull in changes when you update submodules.
+  This can be changed by setting a different remote for the submodule. There a two places to change this:
+\begin{center} 
+  \texttt{.gitmodules} changed for everyone \\
+  \texttt{.git/config} changed locally for just you
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Submodules start headless}
+ \begin{center}
+ \includegraphics[width=280px]{images/nixon.jpg}
+ \end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Setting up submodules for changes}
+   Submodules are normally in an detached head state, so that any changes are not tracked. To start tracking the changes we need to create a branch that contains the changes we do to our submodule.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{digging deeper..}
+	\begin{itemize}
+		\item When initializing a submodule, a \textbf{.gitmodules} file will be created. It contains a \emph{SHA1} commit id.
+		\item \textbf{git-grep} does not look for submodules.
+		\item committing in a submodule does not update the \textbf{.gitmodules} file!
+		\item push the commited \textbf{.gitmodules} file to update the submodule reference on origin.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sounds awesome, doesn't it?}
+\begin{center}\includegraphics[width=280px]{images/goodbad.jpg}\end{center}
+\end{frame}

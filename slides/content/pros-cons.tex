@@ -1,0 +1,23 @@
+\section{Pros and Cons}
+
+\begin{frame}
+  \frametitle{Pros (the strength)}
+  	Submodules let devide your repository into smaller parts.
+	\begin{itemize}
+		\item each submodule can be cloned individually.
+		\item pushed commits from a submodule go directly to the specified origin (of the submodule).
+		\item easy to distinguish between different projects (divided into multiple repositories)
+		\item no disk space waste, only file with pointers exist.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Cons (well..)}
+	Submodules lack of features and design consistencies.
+	\begin{itemize}
+		\item hard to get rid of obsolete submodules
+		\item moving code between submodules can cause duplication, irritations and merge conflicts
+		\item user has to manage modules via meta files like .gitmodules file
+		\item required code must be cloned individually
+	\end{itemize}
+\end{frame}
