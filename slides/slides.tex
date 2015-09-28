@@ -72,7 +72,7 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Submodules start headless}
+\frametitle{Submodules start with a detached HEAD}
  \begin{center}
  \includegraphics[width=280px]{images/nixon.jpg}
  \end{center}
@@ -94,8 +94,6 @@
 		\item push the commited \textbf{.gitmodules} file to update the submodule reference on origin.
 	\end{itemize}
 \end{frame}
-
-\section{Live Demo}
 
 \begin{frame}
 	\frametitle{Sounds awesome, doesn't it?}
@@ -127,5 +125,15 @@
 \end{frame}
    
 \section{Alternative: subtrees}
+\begin{frame}{Animation}
+\frametitle{how do subtrees work}
+	\begin{itemize}[<+- | alert@+>]
+		\item Dependencies are added as new remote for a new branch
+		\item Branch is read in to the main project via \textbf{git read-tree}
+		\item Getting new changes is done via merging in the dependency branch
+		\item \textbf{git diff tree} can be used in stead of \textbf{git diff}
+	\end{itemize}
+
+\end{frame}	
 
 \end{document}
