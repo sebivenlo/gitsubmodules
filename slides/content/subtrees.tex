@@ -1,1 +1,11 @@
 \section{Alternative: subtrees}
+\begin{frame}{Animation}
+\frametitle{how do subtrees work}
+	\begin{itemize}[<+- | alert@+>]
+		\item Dependencies are added as new remote for a new branch
+		\item Branch is read in to the main project via \textbf{git read-tree}
+		\item Getting new changes is done via merging in the dependency branch
+		\item \textbf{git diff tree} can be used in stead of \textbf{git diff}
+	\end{itemize}
+
+\end{frame}	
