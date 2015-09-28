@@ -4,7 +4,7 @@
   \frametitle{Getting upstream changes}
    Submodules require you to  \alert{explicitly} trigger an update.
    This protects you from blowing your project up with unexpected changes to one of the submodules.    
-  \begin{center}cd $<$your-submodule-path$>$\\ \texttt{git submodule update --remote} \end{center}
+  \begin{center}\texttt{cd $<$your-submodule-path$>$}\\ \texttt{git submodule update --remote} \end{center}
   
   Git now automatically \emph{fetches} the changes from upstream and \emph{merges} them.
 
@@ -31,6 +31,8 @@
 \begin{frame}[fragile]
   \frametitle{Setting up submodules for changes}
    Submodules are normally in an detached head state, so that any changes are not tracked. To start tracking the changes we need to create a branch that contains the changes we do to our submodule.
+   
+    \begin{center}\texttt{cd $<$your-submodule-path$>$}\\ \texttt{git checkout $<$branch-name$>$ }\end{center} 
 
 \end{frame}
 
